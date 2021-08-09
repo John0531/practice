@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .wrap{
+            width: 100%;
+            max-width: 1200px;/* 可被2、3、4、5整除，排版較佳 */
+            margin: auto;
+        }
+
+        .item{
+            margin: 0px 10px 20px;
+            background-color: #ffa;
+            padding: 10px;
+        }
+
+        @media screen and (min-width:768px){
+            .wrap{
+                display: flex;
+            }
+
+            .item{
+                width: 1000px;/* flex的特性，會自動排版 */
+            }
+        }/* 寬度大於768px時，套入樣式效果 */
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="wrap">
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nihil excepturiagnam laudantium quos voluptas, cumque obcaecati eligendi in.</p>
+        </div>
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nihil excepturi aut velit iste nesciunt debitis alias vero architecto adipisci tempora laboriosam magnam laudantium quos voluptas, cumque obcaecati eligendi in.</p>
+        </div>
+        <div class="item">
+            <h3>title</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, nihil excepturi aut velit iste nesciunt debitis alias vero architecto adipisci tempora laboriosam magnam laudantium quos voluptas, cumque obcaecati eligendi in.</p>
+        </div>
+    </div>
+</body>
+</html>

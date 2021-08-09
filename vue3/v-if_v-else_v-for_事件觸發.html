@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div id="app">
+        <ul>
+            <li v-for="item in people">
+                <!-- people為陣列名稱，item陣列的物件，用v-for取出陣列中的所有物件-->
+                {{item.name}}
+                <img :src="item.image" alt="" width="200">
+                <i v-if="item.gender==='male'" class="bi bi-gender-male"></i>
+                <i v-else class="bi bi-gender-female"></i>
+                <hr> {{item.cash}}
+                <button type="button" @click="item.cash++">
+                    增加
+                </button>
+            </li>
+        </ul>
+    </div>
+
+
+
+    <script>
+        Vue.createApp({
+            data: function() {
+                return {
+                    people: [{
+                        name: '小明',
+                        image: 'https://images.unsplash.com/photo-1593052393678-d1c690c76071?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+                        cash: 1000,
+                        gender: 'male'
+                    }, {
+                        name: '漂亮阿姨',
+                        image: 'https://images.unsplash.com/photo-1526107557768-2073f33a8596?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80',
+                        cash: 50000,
+                        gender: 'female'
+                    }, {
+                        name: '杰倫',
+                        image: 'https://images.unsplash.com/photo-1504593811423-6dd665756598?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                        cash: 1000000,
+                        gender: 'male'
+                    }, ]
+                };
+            },
+
+            methods: {
+
+            },
+
+            mounted: function() {
+
+            }
+        }).mount("#app");
+    </script>
+</body>
+
+</html>

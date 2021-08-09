@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        img{
+            vertical-align: bottom;/* 圖片垂直不留白 */
+        }
+
+        .banner img{
+            width: 100%;
+        }
+        
+        .title{
+            margin: 0 0px 20px;
+            padding: 30px 10px;
+            background-color: #ccc;
+        }/* 關於我們區塊 */
+
+        .title h2{
+            text-align: center;
+            font-size: 46px;
+        }
+
+        .title p{
+            font-size: 22px;
+            text-align: center;
+        }
+
+        .item-group{
+            width: 100%;
+            max-width: 1400px;/* 左右側留白 */
+            margin: auto;/* 置中 */
+        }/* 3組圖文 */
+
+        .item{
+            margin: 0 10px 40px;/* 上 左右 下 */
+        }/* 1組圖文 */
+        
+        .item .text h3{
+            font-size: 24px;
+            text-align: center;
+        }
+        .item .pic img{
+            width: 100%;
+        }
+
+        .footer{
+            background-color: #333;
+            color: aaa;
+            text-align: center;
+            padding: 10px 0px;
+        }
+
+        .service{
+            margin: 60px 0;
+            background-color: #ffa;
+        }/* 中間橫排圖文 */
+
+        @media screen and (min-width:768px){
+            .item-group{
+            display: flex;
+            } 
+
+            .service .item{
+                display: flex;
+                margin: 0;
+            }
+
+            .service .item .pic,.service .item .text{
+                width: 50%;/* 圖文版面各占一半 */
+                margin: 0;
+            }
+            
+            .service .item .text{
+                display: flex;
+                padding: 0 20px;
+                box-sizing: border-box;
+                flex-direction: column;/* 直的排列 */
+                justify-content: center;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="banner"><!-- 頂部圖片 -->
+        <img src="https://picsum.photos/1400/400/?random=1">
+    </div>
+
+    <div class="about"><!-- 命名 -->
+        <div class="wrap"><!-- wrap包覆所有物件 -->
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam, quibusdam hic deserunt ex facere tempore laborum animi earum quae?</p>
+            </div>
+            <div class="item-group"><!-- 3組圖片+文字 -->
+                <div class="item"><!-- 圖片+文字 -->
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=1">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=2">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=3">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="service"><!-- 左右圖文 -->
+        <div class="wrap">
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=4">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="about">
+        <div class="wrap">
+            <div class="title">
+                <h2>關於我們</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestiae numquam, quibusdam hic deserunt ex facere tempore laborum animi earum quae?</p>
+            </div>
+            <div class="item-group">
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=10">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=20">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="pic">
+                        <img src="https://picsum.photos/300/200/?random=30">
+                    </div>
+                    <div class="text">
+                        <h3>title</h3>
+                        <p>品質發表內容可憐眼中世紀點頭滿足，人群外觀評價家電不多路線詳細訊息，是他範圍早就團隊上了組成很少專題，金錢農民客戶姓名未經盯着神話好看感到，今年趕緊有機會上路利益條例附件當時手上，願意將其顧客點擊碩士都在正是取得命運除了，詳細辦公室不錯等方面幻想保險接觸。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer"><!-- 底部文字 -->
+        copyright 2018 by csscoke
+    </div>
+</body>
+
+</html>

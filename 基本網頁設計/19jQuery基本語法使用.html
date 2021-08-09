@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box-a{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #aaa;
+        }
+        .box-b{
+            width: 200px;
+            height: 200px;
+            display: inline-block;
+            background-color: #faa;
+        }
+
+        .product-title{
+            background-color: #000;
+            color: #fff;
+            padding: 10px;
+            cursor: pointer;/* 可點選狀態 */
+        }
+
+        .content{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="box-a">box-a</div>
+    <div class="box-b">box-b</div>
+
+    <div class="product-title">產品介紹</div>
+    <div class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quasi deleniti cumque, voluptate magnam ratione temporibus atque, id necessitatibus voluptatibus optio rerum nulla ullam quaerat alias laboriosam numquam, quia molestiae nam!
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script><!-- jQuery連結 -->
+    <script>
+        $(document).ready(function(){
+            $(".box-a").dblclick(function() {
+                $(".box-b").toggle();
+            })/* dblclick 滑鼠雙擊、toggle 開關 */
+
+            $(".product-title").click(function () {
+                $(".content").toggle();
+            })
+        })
+    </script>
+
+</body>
+</html>

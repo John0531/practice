@@ -1,0 +1,14 @@
+{
+    "name": "practice",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "json": "json-server --watch practiceData.json --port 8888"
+    },
+    "author": "John",
+    "license": "MIT",
+    "dependencies": {
+        "json-server": "^0.16.3"
+    }
+}

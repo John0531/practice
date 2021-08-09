@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="app">
+        {{text}}
+    </div>
+
+    <script>
+        Vue.createApp({
+            data: function() {
+                return {
+                    text: "hello world",
+                    name: "小明",
+                    person: {
+                        name: "小華",
+                        cash: 1000,
+                        gender: "male"
+                    }
+                };
+            },
+
+            methods: {
+                clickAlert() {
+                    alert("我被觸發了")
+                }
+            },
+
+            mounted: function() {
+                this.clickAlert(); /* 取得方法 */
+                console.log(this.name) /* 取得資料 */
+                console.log(this.person.cash) /* 取得物件中的屬性資料 */
+                this.text = "我是小明" /* 更改資料內容，可用於初始化資料 */
+            }
+        }).mount("#app");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,34 @@
+{
+  "contact": [
+    {
+      "id": 1,
+      "name": "alex",
+      "email": "john255@gmail.com"
+    },
+    {
+      "name": "john",
+      "email": "4523ddd@gmail.com",
+      "id": 2
+    },
+    {
+      "name": "alice123",
+      "email": "sdsx245@gmail.com",
+      "id": 3
+    },
+    {
+      "name": "alan",
+      "email": "sspl3fdd@gmail.com",
+      "id": 4
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
