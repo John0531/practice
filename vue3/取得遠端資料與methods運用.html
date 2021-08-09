@@ -73,6 +73,7 @@
                 this.getRandomUser()
                 axios.get("http://localhost:8888/contact")
                     .then((res) => {
+                        console.log(res)
                         this.contact = res.data
                     }).catch((err) => {
                         console.log(err)
