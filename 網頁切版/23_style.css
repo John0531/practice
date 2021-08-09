@@ -1,0 +1,1216 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+/* 共用:文字標題 */
+.main-title {
+    margin: 100px 0;
+}
+
+.main-title .container {
+    width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.main-title .container h1 {
+    width: 100%;
+    flex-shrink: 0;
+    box-sizing: border-box;
+    font-size: 70px;
+    margin-bottom: 0.5em;
+    display: flex;
+}
+
+.main-title .container h1::before,
+.main-title .container h1::after {
+    content: "";
+    display: block;
+    height: 5px;
+    flex-grow: 1;
+    background-color: #aaa;
+    margin: auto;
+}
+
+.main-title .container h1::before {
+    margin-right: 0.5em;
+}
+
+.main-title .container h1::after {
+    margin-left: 0.5em;
+}
+
+.main-title .container .txt {
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.main-title .container .txt p {
+    margin-bottom: 1em;
+}
+
+
+
+
+
+
+
+
+/* 側邊選單 */
+
+label{
+    position: fixed;
+    left: 300px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 40px;
+    height: 80px;
+    background-color: #000;
+    color: #fff;
+    line-height: 80px;
+    text-align: center;
+    font-size: 30px;
+    border-radius: 0 10px 10px 0;
+    z-index: 10;
+}
+
+
+
+.box{
+    float: left;
+    overflow: hidden;
+}
+
+.side-menu{
+    width: 300px;
+    height: 100%;
+    padding: 50px 0;
+    box-sizing: border-box;
+    background: linear-gradient(0deg, #3381b0, #c2196c);
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 10px rgba(58, 57, 109, 0.611);
+    position: fixed;
+    z-index: 4;
+    opacity: 0.9;
+}
+
+#side-menu-switch {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+}
+
+/* 讓勾選圖示隱藏 */
+
+
+
+
+/* id樣式 */
+
+#side-menu-switch:checked+label .fa-angle-left {
+    transform: scale(-1);
+}
+
+
+/* 將icon鍵頭顛倒 */
+
+#side-menu-switch:checked+label{
+    left: 0;
+}
+
+.side-menu form {
+    display: flex;
+    margin: 0 10px 50px;
+    border-radius: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.466);
+}
+
+.side-menu form input {
+    border: none;
+    width: 230px;
+    padding: 5px 10px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.side-menu form button {
+    border: none;
+    width: 50px;
+    color: #fff;
+    background-color: transparent;
+}
+
+.side-menu form input:focus,
+.side-menu form button:focus {
+    outline: none;
+}
+
+
+
+.side-menu .nav a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+}
+
+.side-menu .nav li+li a::before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid rgba(255, 255, 255, 0.452);
+    left: 10px;
+    right: 10px;
+    top: 0;
+}
+
+/* 選單分隔線 */
+
+.side-menu .nav a .fab {
+    font-size: 20px;
+    margin-right: -1.1em;
+    transform: scale(0);
+    transition: 0.3s;
+}
+
+/* icon消失，並將文字移回來 */
+
+.side-menu .nav li:hover .fab {
+    margin-right: 0em;
+    transform: scale(1);
+}
+
+.side-menu .nav li:hover>a {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fffa1a;
+}
+
+.side-menu .nav li {
+    position: relative;
+    z-index: 1;
+}
+
+.side-menu .nav ul {
+    transform: translateX(-100%);
+    opacity: 0;
+    position: absolute;
+    left: 100%;
+    width: 300px;
+    top: 6px;
+    background-color: rgba(58, 58, 58, 0.7);
+    box-shadow: 5px 5px 10px rgba(58, 57, 109, 0.611);
+    transition: 0.7s;
+}
+
+.side-menu .nav li:hover>ul {
+    transform: translateX(0%);
+    opacity: 1;
+}
+
+.side-menu form input::placeholder{
+    color: rgb(197, 197, 197);
+}/* 當nav項下的所有li被摸到時，被摸到的那個li項下一層的ul顯示 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 導覽列 */
+.main-header {
+    background: linear-gradient(0deg, #fe70d8, #3713c1);
+}
+
+.main-header .container {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    max-width: 1200px;
+    /* RWD起手式:寬度滿版但不超過1200px */
+    margin: auto;
+}
+
+.main-header .logo {
+    width: 150px;
+}
+
+.main-header .logo img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.main-header .main-nav {
+    margin: auto;
+    display: flex;
+    /* 轉換物件的屬性就能產生上移作用，預設inline屬性無法作用 */
+}
+
+.main-header .main-nav a:hover {
+    transform: translateY(-5px);
+}
+
+/* 摸到後超連結上移*/
+
+.main-header .main-nav a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 1em;
+    position: relative;
+    transform: translateY(0px);
+    transition: 0.3s;
+}
+
+.main-header .main-nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    right: 50%;
+    /* 縮到正中間去不顯示 */
+    height: 0;
+    bottom: -5px;
+    border-bottom: 1px solid #fff;
+    transition: 0.3s;
+    /* 底線動畫 */
+}
+
+/* 超連結底線 */
+
+
+.main-header .main-nav a:hover:after {
+    left: 0;
+    right: 0;
+}
+
+/* 摸到後從中間顯示底線 */
+
+.main-header .header-search {
+    display: flex;
+}
+
+.main-header .header-search button,
+.main-header .header-search input {
+    border: none;
+    background-color: #fff;
+    padding: 5px 10px;
+}
+
+.main-header .header-search button:focus,
+.main-header .header-search input:focus {
+    outline: none;
+}
+
+/*消除點擊後產生的外框線 */
+
+.main-header .header-search button {
+    border-radius: 0 200px 200px 0;
+}
+
+.main-header .header-search input {
+    border-radius: 200px 0 0 200px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 圖文滿版區 */
+.banner {
+    width: 100%;
+    height: 500px;
+    background:
+        linear-gradient(115deg, #7bf 50%,
+            transparent 50%) center center / 100% 100%,
+        url("https://picsum.photos/1200/600/?random=1") right center / auto 100%;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    max-width: 1440px;
+    margin: auto;
+}
+
+.banner-txt {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* 垂直排列 */
+    justify-content: center;
+    /* 垂直置中 */
+    align-items: flex-start;
+    /* 讓線條不填滿版面 */
+}
+
+.banner-txt h1 {
+    font-size: 80px;
+    border-bottom: 1px solid #333;
+    font-weight: 900;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+}
+
+.banner-txt h1 small {
+    display: block;
+    /* 文字換行 */
+    font-size: 53px;
+    font-weight: 700;
+}
+
+.banner-txt h2 {
+    font-size: 50px;
+    font-weight: 700;
+}
+
+.banner-txt p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 破格式網頁 */
+.fish {
+    display: flex;
+    width: 1200px;
+    margin: 100px auto;
+    /* background-color: #999; */
+    padding-top: 75px;
+    /* 將凸出的地方包覆 */
+}
+
+.fish .item {
+    width: 370px;
+    margin: 0 15px;
+    text-align: center;
+    border: 10px solid #f5afac;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 10px 20px 50px #f7b6a7;
+}
+
+.fish .item h3 {
+    color: #f5afac;
+}
+
+.fish .item p {
+    color: #ccc;
+}
+
+.fish .item .txt {
+    padding: 20px 20px 2em;
+}
+
+.fish .item .icon {
+    width: 150px;
+    height: 150px;
+    background-color: #fff;
+    margin: -75px auto 0;
+    /* 將上方凸出去 */
+    font-size: 75px;
+    /* icon的大小 */
+    line-height: 150px;
+    /* 重直至中 */
+    border-radius: 50%;
+    color: #f5afac;
+    position: relative;
+}
+
+.fish .item .icon::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 10px solid #f5afac;
+    border-right: 10px solid #f5afac;
+    border-bottom: 10px solid transparent;
+    border-left: 10px solid transparent;
+    left: -10px;
+    top: -10px;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+/* 圓形上半邊框 */
+
+.fish .item:hover .ss {
+    animation: shake 0.2s linear infinite alternate;
+    /* 動畫名稱 速度 速度不加快 無限重複 來回 */
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(-10deg);
+    }
+
+    100% {
+        transform: rotate(10deg);
+    }
+}/* icon搖晃動畫 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 通用橫式版面 */
+.student-msg {
+    display: flex;
+    align-items: center;
+}
+
+.student-msg .container {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+}
+
+.student-msg .item {
+    width: 368px;
+    margin: 0 15px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.6);
+    border: 0.5px solid #888;
+    box-shadow: 0 10px 30px rgba(160, 0, 0, 0.5);
+    /* 陰影 */
+    font-family: 'Noto Sans TC', sans-serif;
+    flex-wrap: wrap;
+    /* 自動換行 */
+}
+
+.student-msg .item .pic {
+    width: 40%;
+}
+
+.student-msg .item .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 消除圖片比例變形 */
+}
+
+.student-msg .item .txt {
+    width: 60%;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+}
+
+.student-msg .item .txt h2 {
+    margin-bottom: 0.4em;
+    font-weight: 500;
+}
+
+.student-msg .item .txt p {
+    font-weight: 300;
+}
+
+.student-msg .item .txt .btn {
+    line-height: 1.5em;
+    border: 1px solid #ccc;
+    padding: 0 1em;
+    align-self: flex-end;
+    text-decoration: none;
+    border-radius: 200px;
+    margin-top: 1em;
+    margin-top: auto;
+    color: #aaa;
+}
+
+.student-msg .item .txt .btn:hover {
+    background-color: #ccc;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 人員介紹頁面 */
+.member {
+    width: 1200px;
+    display: flex;
+    margin: auto;
+}
+
+.member .item {
+    width: 368px;
+    margin: 15px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transform: translateY(0px);
+    transition: 1s;
+}
+
+.member .txt {
+    height: 170px;
+}
+
+/* 將txt設定一固定高度，解決文字不同行變色留白問題 */
+
+.member .item img {
+    width: 100%;
+    vertical-align: middle;
+    /* 消除圖片留白 */
+}
+
+.member .item h2 {
+    border-bottom: 1px solid #888;
+    padding-bottom: 0.3em;
+    margin-bottom: 0.3em;
+    font-weight: 900;
+    transition: 1.5s;
+}
+
+.member .item p {
+    line-height: 1.5;
+    font-weight: 300;
+    font-size: 16px;
+    transition: 1.5s;
+}
+
+.member .item .txt {
+    padding: 20px;
+    position: relative;
+}
+
+.member .item .txt::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: 0;
+    top: 0;
+    border-top: 60px solid transparent;
+    border-left: 184px solid #fff;
+    border-right: 184px solid #fff;
+    transform: translateY(-100%);
+}
+
+/* 圖片中的斜角 */
+
+.member .item:hover {
+    transform: translateY(-50px);
+}
+
+.member .item:hover .txt {
+    background: linear-gradient(0deg, #FB8076, #FEB85D);
+}
+
+.member .item:hover .txt::before {
+    border-left: 184px solid #feb85d;
+    border-right: 184px solid #feb85d;
+}
+
+.member .item:hover h2 {
+    color: #fff;
+    border-bottom-color: #fff;
+}
+
+.member .item:hover p {
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 圖文互動卡片 */
+.interactive {
+    width: 100%;
+    display: flex;
+}
+
+.interactive .item {
+    width: 25%;
+    position: relative;
+}
+
+.interactive .item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.interactive .item .txt {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.interactive .item:hover .txt {
+    opacity: 1;
+}
+
+.interactive .item h2 {
+    font-size: 28px;
+    color: #ff0;
+    font-weight: 500;
+}
+
+.interactive .item h2::after {
+    content: "";
+    display: block;
+    width: 0%;
+    height: 2px;
+    margin: 10px 0px;
+    background-color: #ff0;
+    transition: width 0.5s 0.3s;
+}
+
+.interactive .item:hover h2::after {
+    width: 100%;
+}
+
+.interactive .item p {
+    font-size: 18px;
+    color: #fff;
+    font-weight: 100;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 交錯漂浮版 */
+.staggered {
+    width: 1200px;
+    margin: auto;
+}
+
+.staggered .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 70px;
+}
+
+.staggered .item .pic {
+    width: 55%;
+    flex-shrink: 0;
+    /* 設定flex不字洞收縮排版 */
+}
+
+.staggered .item .pic img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.staggered .item .txt {
+    width: 55%;
+    flex-shrink: 0;
+    /* 設定flex不字洞收縮排版 */
+    padding: 50px 30px;
+    box-sizing: border-box;
+    /* 整體寬度調整為width的寬度 */
+    position: relative;
+    z-index: 1;
+    /* 文字蓋到圖片上方 */
+}
+
+.staggered .item>:first-child {
+    margin-right: -10%;
+}
+
+/* item裡的第一個物件 */
+
+.staggered .item:nth-child(1) .txt {
+    background-color: rgba(240, 174, 193, 0.75);
+}
+
+.staggered .item:nth-child(2) .txt {
+    background-color: rgba(129, 241, 125, 0.75);
+}
+
+.staggered .item:nth-child(3) .txt {
+    background-color: rgba(126, 203, 255, 0.75);
+}
+
+.staggered .item:nth-child(4) .txt {
+    background-color: rgba(252, 53, 252, 0.75);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 方塊酥頁面 */
+.cube {
+    width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.cube .item {
+    float: left;
+    position: relative;
+}
+
+.cube .item img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.cube .item:first-child {
+    width: 50%;
+}
+
+.cube .item:first-child~.item {
+    width: 25%;
+}
+
+/* 選到第一個以後的所有item */
+
+.cube .item .txt {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    text-align: center;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(0);
+    transition: 0.5s;
+}
+
+.cube .item:hover .txt {
+    opacity: 1;
+    /* 使用opacity做transition會有淡入效果 */
+    transform: scale(1);
+    /* 文字縮放動畫 */
+}
+
+.cube .item h3 {
+    margin-bottom: 0.4em;
+}
+
+.cube .item p {
+    font-weight: 100;
+    line-height: 1.7;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 訂單進度條 */
+.progress .list {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.progress .list li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(9deg, #185a9d, #43cea2);
+    border-radius: 50%;
+    position: relative;
+    font-size: 20px;
+    color: #fff;
+    box-shadow: 0px 0px 0px 4px #fff;
+    /* 邊框 */
+}
+
+.progress .list li .fas {
+    font-size: 40px;
+    margin-bottom: 6px;
+}
+
+.progress .list li+li {
+    margin-left: 100px;
+}
+
+.progress .list li+li::before {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 5px;
+    background-color: #43cea2;
+    z-index: -1;
+    box-shadow: 0px 0px 0px 3px #fff;
+    top: 0;
+    bottom: 0;
+    left: -100px;
+    /* 負值代表向外延伸 */
+    margin: auto;
+}
+
+.progress .list li.active~li {
+    background: linear-gradient(9deg, #999, #ccc);
+}
+
+.progress .list li.active~li::before {
+    background: #b0b0b0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 旋轉拼接方塊 */
+.splicing ul {
+    width: 960px;
+    margin: auto;
+    padding: 100px 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.splicing li {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    line-height: 200px;
+    /* outline: 1px solid #f00; */
+    margin: 0 60px -40px;
+    position: relative;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.splicing li::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+    z-index: -1;
+}
+
+.splicing li:nth-child(n+4) {
+    left: 160px;
+}
+
+.splicing li:nth-child(n+7) {
+    left: 0;
+}
+
+.splicing .box1::before {
+    background-color: #3ed0cd;
+}
+
+.splicing .box2::before {
+    background-color: #b2e086;
+}
+
+.splicing .box3::before {
+    background-color: #ef8899;
+}
+
+.splicing .box4::before {
+    background-color: #fc7b51;
+}
+
+.splicing .box5::before {
+    background-color: #2fccf9;
+}
+
+.splicing .box6::before {
+    background-color: #5f539b;
+}
+
+.splicing .box7::before {
+    background-color: #fce920;
+}
+
+.splicing .box8::before {
+    background-color: #7cc85c;
+}
+
+.splicing .box9::before {
+    background-color: #ffa55e;
+}
+
+.splicing li:hover {
+    color: #fff;
+}
+
+.splicing li:hover::before {
+    background-color: #000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 頁尾 */
+.main-footer {
+    padding: 150px 0 0;
+    /* 上 左右 下 */
+    background: linear-gradient(-20deg, #3f5494, #08c7a5);
+    margin-top: 100px;
+}
+
+.main-footer .container {
+    display: flex;
+    width: 1200px;
+    margin: auto;
+}
+
+.footer-item {
+    width: 0;
+    flex-grow: 1;
+    /* 將flex區塊版面佔滿 */
+    margin-right: 20px;
+}
+
+.footer-item h4 {
+    font-size: 24px;
+    color: #fff;
+    border-bottom: 1px dotted #fff;
+    margin-bottom: 0.5em;
+    padding-bottom: 0.5em;
+}
+
+.footer-item nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-item nav a {
+    color: #fff;
+    line-height: 1.4;
+    text-decoration: none;
+    padding: 5px 0;
+}
+
+.footer-item nav a:hover {
+    color: #fa0;
+}
+
+.footer-subs {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-subs form {
+    display: flex;
+    width: 100%;
+    margin: auto 0;
+}
+
+.footer-subs input[type="text"],
+.footer-subs input[type="submit"] {
+    border: none;
+    padding: 5px 10px;
+}
+
+.footer-subs input[type="text"] {
+    width: 0;
+    flex-grow: 1;
+}
+
+.footer-subs input[type="submit"] {
+    color: #70f6df;
+    background-color: #3e5293;
+}
+
+.copyright {
+    width: 100%;
+    text-align: center;
+    margin: 50px 0 0;
+    padding: 10px 0;
+    background-color: #3e5293;
+    color: #70f6df;
+}

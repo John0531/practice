@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/70df306591.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        
+    
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .main-footer{
+        padding: 150px 0 0;/* 上 左右 下 */
+        background: linear-gradient(-20deg,#3f5494,#08c7a5);
+    }
+
+    .main-footer .container{
+        display: flex;
+        width: 1200px;
+        margin: auto;
+    }
+
+    .footer-item{
+        width: 0;
+        flex-grow: 1;/* 將flex區塊版面佔滿 */
+        margin-right: 20px;
+    }
+
+    .footer-item h4{
+        font-size: 24px;
+        color: #fff;
+        border-bottom: 1px dotted #fff;
+        margin-bottom: 0.5em;
+        padding-bottom: 0.5em;
+    }
+
+    .footer-item nav{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-item nav a{
+        color: #fff;
+        line-height: 1.4;
+        text-decoration: none;
+        padding: 5px 0;
+    }
+
+    .footer-item nav a:hover{
+        color: #fa0;
+    }
+
+    .footer-subs{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footer-subs form{
+        display: flex;
+        width: 100%;
+        margin: auto 0;
+    }
+
+    .footer-subs input[type="text"],
+    .footer-subs input[type="submit"]{
+        border: none;
+        padding: 5px 10px;
+    }
+
+    .footer-subs input[type="text"]{
+        width: 0;
+        flex-grow: 1;
+    }
+
+    .footer-subs input[type="submit"]{
+        color: #70f6df;
+        background-color: #3e5293;
+    }
+    .copyright{
+        width: 100%;
+        text-align: center;
+        margin: 150px 0 0;
+        padding: 10px 0;
+        background-color: #3e5293;
+        color: #70f6df;
+    }
+    </style>
+</head>
+<body>
+    
+
+    <div class="main-footer">
+        <div class="container">
+            <div class="footer-item">
+                <h4>關於課程</h4>
+                <nav>
+                    <a href="#"><i class="fas fa-biking"></i> 課程目標</a>
+                    <a href="#"><i class="fas fa-biking"></i> 辦學理念</a>
+                    <a href="#"><i class="fas fa-biking"></i> 課程宗旨</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>課程列表</h4>
+                <nav>
+                    <a href="#"><i class="fas fa-biking"></i> 網頁入門班</a>
+                    <a href="#"><i class="fas fa-biking"></i> RWD網頁深入理解</a>
+                    <a href="#"><i class="fas fa-biking"></i> CSS3互動動畫設計</a>
+                    <a href="#"><i class="fas fa-biking"></i> Bootstrap框架實務</a>
+                </nav>
+            </div>
+            <div class="footer-item">
+                <h4>服務項目</h4>
+                <nav>
+                    <a href="#"><i class="fas fa-biking"></i> 網站建置顧問</a>
+                    <a href="#"><i class="fas fa-biking"></i> 網站設計建置</a>
+                    <a href="#"><i class="fas fa-biking"></i> 網站規劃</a>
+                    <a href="#"><i class="fas fa-biking"></i> 企業教育訓練</a>
+                </nav>
+            </div>
+            <div class="footer-item footer-subs">
+                <h4>訂閱電子報</h4>
+                <form action="">
+                    <input type="text"><!-- 輸入區 -->
+                    <input type="submit" value="訂閱"><!-- 提交按鈕 -->
+                </form><!-- 表單 -->
+            </div>
+        </div>
+        <div class="copyright">
+            Copyright &copy; 2019
+            金魚都能懂得這個網頁畫面怎麼切
+        </div>
+    </div>
+</body>
+</html>

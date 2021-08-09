@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+    body{
+        background-color: #000;
+    }
+
+    .wrap{
+        width: 100%;
+        margin: auto;
+        overflow: hidden;
+    }
+
+    .item{
+        float: left;
+        position: relative;
+    }
+
+    .item img{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .item:first-child{
+        width: 50%;
+    }
+
+    .item:first-child~.item{
+        width: 25%;
+    }/* 選到第一個以後的所有item */
+
+    .item .txt{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        padding: 15px;
+        text-align: center;
+        color: #fff;
+        background-color: rgba(0, 0, 0, 0.6);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        transform: scale(0);
+        transition: 0.5s;
+    }
+
+    .item:hover .txt{
+        opacity: 1;/* 使用opacity做transition會有淡入效果 */
+        transform: scale(1);/* 文字縮放動畫 */
+    }
+
+    .item h3{
+        margin-bottom: 0.4em;
+    }
+
+    .item p{
+        font-weight: 100;
+        line-height: 1.7;
+    }
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div class="item">
+            <img src="https://picsum.photos/500/500/?random=1">
+            <div class="txt">
+                <h3>金魚都懂切版</h3>
+                <p>宅宅青春氣息這種整合戰士提問地點，高速指揮一樣對付儀器以來一起，高達你在穿著部隊少女等人股份退出計劃生物總統一看銷售眼睛，丈夫死了經濟也就第三，穩定懷疑繼續一片大部分好友點點意外如今，浪漫藥品，能在。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500/?random=13">
+            <div class="txt">
+                <h3>金魚也懂CSS</h3>
+                <p>羅東我去萬元長大現代化，夥伴面臨，強調。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500/?random=12">
+            <div class="txt">
+                <h3>金魚還會HTML</h3>
+                <p>準備簡單文本總經理文件，投訴風情一切都，提供身影，教師感動。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500/?random=11">
+            <div class="txt">
+                <h3>啊你會甚麼?</h3>
+                <p>只不過不限臉上找到面對然後，她們太多福。</p>
+            </div>
+        </div>
+        <div class="item">
+            <img src="https://picsum.photos/500/500/?random=10">
+            <div class="txt">
+                <h3>對不起我又嗆人了</h3>
+                <p>優勢電話先進教育，堅持不必共有一會兒感謝不能精神你們同步留。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

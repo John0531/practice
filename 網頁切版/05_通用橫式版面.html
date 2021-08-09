@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>通用橫式版面</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    .wrap{
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url(https://picsum.photos/1920/1080/?random=22);
+    }
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+    }
+
+    .item{
+        width: 368px;
+        margin: 0 15px;
+        display: flex;
+        background-color: rgba(255, 255, 255, 0.6);
+        border: 0.5px solid #888;
+        box-shadow: 0 10px 30px rgba(160, 0, 0, 0.5);/* 陰影 */
+        font-family: 'Noto Sans TC', sans-serif;
+        flex-wrap: wrap;/* 自動換行 */
+    }
+
+    .item .pic{
+        width: 40%;
+    }
+
+    .item .pic img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;/* 消除圖片比例變形 */
+    }
+
+    .item .txt{
+        width: 60%;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+    }
+
+    .item .txt h2{
+        margin-bottom: 0.4em;
+        font-weight: 500;
+    }
+
+    .item .txt p{
+        font-weight: 300;
+    }
+
+    .item .txt .btn{
+        line-height: 1.5em;
+        border: 1px solid #ccc;
+        padding: 0 1em;
+        align-self: flex-end;
+        text-decoration: none;
+        border-radius: 200px;
+        margin-top: 1em;
+        margin-top: auto;
+        color: #aaa;
+    }
+
+    .item .txt .btn:hover{
+        background-color: #ccc;
+        color: #fff;
+    }
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div class="container">
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=1">
+                </div>
+                <div class="txt">
+                    <h2>新聞標題</h2>
+                    <p>他還團隊當前之間各自場所精采作家英語引擎一句話住了性能請您。</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=11">
+                </div>
+                <div class="txt">
+                    <h2>人物介紹</h2>
+                    <p>他還團隊當前之間各自場所精采作家英語引擎一句話住了性能請您。</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+            <div class="item">
+                <div class="pic">
+                    <img src="https://picsum.photos/400/400/?random=12">
+                </div>
+                <div class="txt">
+                    <h2>產品介紹</h2>
+                    <p>他還團隊當前之間各自場所精采作家英語引擎一句話住了性能請您。</p>
+                    <a href="#" class="btn">more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

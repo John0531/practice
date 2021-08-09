@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .wrap{
+        margin: 100px 0;
+    }
+
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        box-shadow: 0 0 30px #ccc;
+        justify-content: flex-end;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .container h1{
+        width: 100%;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        font-size: 220px;
+        padding-left: 15px;
+        color: #ddd;
+        position: absolute;
+        left: 0;
+        top: -70px;
+        line-height: 1.1em;
+    }
+
+
+    .container .txt{
+        width: 600px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+        position: relative;
+        z-index: 1;
+    }
+
+    .container .txt p{
+        margin-bottom: 1em;
+    }
+
+    .container .txt p:first-child::first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div class="container">
+            <h1>CSS COKE IS AWESOME</h1>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat temporibus consequuntur quibusdam, iure repellat voluptatem veniam placeat omnis aliquam officiis ad rem inventore provident expedita ex est distinctio ab animi consequatur officia. Vero molestiae facere accusantium suscipit qui maiores totam odio nihil, aliquid architecto? Cum veniam sint non! Optio doloremque a odio ipsa iste explicabo enim praesentium, dolores aperiam sunt pariatur in officia numquam earum facilis sapiente dolorum modi. Explicabo voluptates sed aliquid debitis optio laboriosam voluptate obcaecati quaerat iure fugiat. Eius sequi, similique sed quod ad perspiciatis voluptatibus totam ea veniam incidunt possimus labore est recusandae delectus suscipit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat temporibus consequuntur quibusdam, iure repellat voluptatem veniam placeat omnis aliquam officiis ad rem inventore provident expedita ex est distinctio ab animi consequatur officia. Vero molestiae facere accusantium suscipit qui maiores totam odio nihil, aliquid architecto? Cum veniam sint non! Optio doloremque a odio ipsa iste explicabo enim praesentium, dolores aperiam sunt pariatur in officia numquam earum facilis sapiente dolorum modi. Explicabo voluptates sed aliquid debitis optio laboriosam voluptate obcaecati quaerat iure fugiat. Eius sequi, similique sed quod ad perspiciatis voluptatibus totam ea veniam incidunt possimus labore est recusandae delectus suscipit?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

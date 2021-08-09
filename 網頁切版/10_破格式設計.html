@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/70df306591.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    html,body{
+        height: 100%;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        background: linear-gradient(-45deg,#fffaf0,#f8c3c1);
+        }
+
+    .wrap{
+        display: flex;
+        width: 1200px;
+        margin: 100px auto;
+        /* background-color: #999; */
+        padding-top: 75px;/* 將凸出的地方包覆 */
+    }
+
+    .item{
+        width: 370px;
+        margin: 0 15px;
+        text-align: center;
+        border: 10px solid #f5afac;
+        background-color: #fff;
+        border-radius: 20px;
+        box-shadow: 10px 20px 50px #f7b6a7;
+    }
+
+    .item h3{
+        color: #f5afac;
+    }
+
+    .item p{
+        color: #ccc;
+    }
+
+    .item .txt{
+        padding: 20px 20px 2em;
+    }
+
+    .item .icon{
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        margin: -75px auto 0;/* 將上方凸出去 */
+        font-size: 75px;/* icon的大小 */
+        line-height: 150px;/* 重直至中 */
+        border-radius: 50%;
+        color: #f5afac;
+        position: relative;
+    }
+
+    .item .icon::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-top: 10px solid #f5afac;
+        border-right: 10px solid #f5afac;
+        border-bottom: 10px solid transparent;
+        border-left: 10px solid transparent;
+        left: -10px;
+        top: -10px;
+        border-radius: 50%;
+        transform: rotate(-45deg);
+    }/* 圓形上半邊框 */
+
+    .item:hover .ss{
+        animation: shake 0.2s linear infinite alternate;/* 動畫名稱 速度 速度不加快 無限重複 來回 */
+    }
+
+    @keyframes shake{
+        0%{transform:rotate(-10deg); }
+        100%{transform:rotate(10deg); }
+    }/* icon搖晃動畫 */
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div class="item">
+            <div class="icon">
+                <i class="fab fa-battle-net ss"></i><!-- 新增一個ss樣式 -->
+            </div>
+            <div class="txt">
+                <h3>暴力網頁入門</h3>
+                <p>道理當年排名百度形成鈴聲下載站在本帖完了現場平時投資不管，人們看到生意那麼他還忽然居然問道查找之前，湖北此刻數量見過教程行政，核心不需要保。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fas fa-bomb ss"></i><!-- 新增一個ss樣式 -->
+            </div>
+            <div class="txt">
+                <h3>金魚都能懂版面</h3>
+                <p>魅力有些十二工資資產集體未來不會，眼淚利潤，少年評估答應事業，西部聲明，說著行情階段面前咱們指定首頁民主職工，儘量互動購買，新人幫忙，內存。</p>
+            </div>
+        </div>
+        <div class="item">
+            <div class="icon">
+                <i class="fab fa-affiliatetheme ss"></i><!-- 新增一個ss樣式 -->
+            </div>
+            <div class="txt">
+                <h3>CSScoke</h3>
+                <p>吃飯歲月水果宅宅鑒定點這裡人事論文證明完了技術基於，建立消費創業，手裡網通古代到達電影為你國外也是古代各類理論，人們她們本論壇，分為運行平。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

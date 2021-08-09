@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+    }
+
+    body{
+        padding: 100px 0;
+        background: linear-gradient(20deg,#3d5493,#1aa2a0) fixed center center / 100% 100%;
+    }
+
+    .wrap{
+        width: 1200px;
+        margin: auto;
+    }
+
+    .item{
+        display: flex;
+        align-items: center;
+        margin-bottom: 70px;
+    }
+
+    .item .pic{
+        width: 55%;
+        flex-shrink: 0;/* 設定flex不字洞收縮排版 */
+    }
+
+    .item .pic img{
+        width: 100%;
+        vertical-align: middle;
+    }
+
+    .item .txt{
+        width: 55%;
+        flex-shrink: 0;/* 設定flex不字洞收縮排版 */
+        padding: 50px 30px;
+        box-sizing: border-box;/* 整體寬度調整為width的寬度 */
+        position: relative;
+        z-index: 1;/* 文字蓋到圖片上方 */
+    }
+
+    .item>:first-child{
+        margin-right: -10%;
+    }/* item裡的第一個物件 */
+
+    .item:nth-child(1) .txt{
+        background-color: rgba(240,174,193,0.75);
+    }
+    .item:nth-child(2) .txt{
+        background-color: rgba(129,241,125,0.75);
+    }
+    .item:nth-child(3) .txt{
+        background-color: rgba(126,203,255,0.75);
+    }
+    .item:nth-child(4) .txt{
+        background-color: rgba(252,53,252,0.75);
+    }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="wrap">
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350/?random=1">
+            </div>
+            <div class="txt">
+                <h2>產品介紹</h2>
+                <p>評論世界財政是否，之後法規照片人大北方美好導航語音我的高興，手上參觀及時一方面每月專門不怕造型西方，配套臉上人士儘量智能指南暫無職業收到新聞，文學事故對於鮮花指南解決語文不可能小七設計文章資格輕易信。</p>
+            </div><!-- 較晚寫的原始碼物件會蓋住較早寫的原始碼物件 -->
+        </div>
+
+        <div class="item">
+            <div class="txt">
+                <h2>關於我們</h2>
+                <p>湖北熱線有一種印象實業位置甚至從來沒你還母親，贏得拿出來自文件大小來到，味道少年思路下載官員，說法同事才是密碼，說是床上被人收購記錄父母鼓勵工藝各自還會業務可用缺乏，方向不太商品上升整合補充等方面拍。</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350/?random=10">
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="pic">
+                <img src="https://picsum.photos/600/350/?random=11">
+            </div>
+            <div class="txt">
+                <h2>聯絡方式</h2>
+                <p>媒體森林關注最後引進結構目的，不承擔，類型大聲出租本論壇緊張一片二級舉報他人女朋友電信顏色要去，開發商中有號碼便是，大陸想到進一步考生另外，規格水晶看著長大，機票也不也沒風險進入有點全部在這，是啊會。</p>
+            </div>
+        </div>
+
+        <div class="item">
+            <div class="txt">
+                <h2>我們的服務</h2>
+                <p>下列物業進一步提醒怎麼樣，幾個符合他的硬盤公共出版社到處享受幫你加盟，標籤人家檢查股市文件反而祝福學歷連續高考依然，圖片病毒桌面，從事問題具有判斷非常案例還會所在地，前面提示練習是不是結構地說風格斑竹調節，改善產品也就是物理點點，習慣狀態很好演唱會準確商。</p>
+            </div>
+            <div class="pic">
+                <img src="https://picsum.photos/600/350/?random=1">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

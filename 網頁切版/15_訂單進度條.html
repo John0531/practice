@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/70df306591.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    html,body{
+        height: 100%;
+    }
+
+    body{
+        display: flex;
+        align-items: center;
+        background-color: #546377;
+    }
+
+    .list{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .list li{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        width: 150px;
+        height: 150px;
+        background: linear-gradient(9deg,#185a9d,#43cea2);
+        border-radius: 50%;
+        position: relative;
+        font-size: 20px;
+        color: #fff;
+        box-shadow: 0px 0px 0px 4px #fff;/* 邊框 */
+    }
+
+    .list li .fas{
+        font-size: 40px;
+        margin-bottom: 6px;
+    }
+
+    .list li + li{
+        margin-left: 100px;
+    }
+
+    .list li + li::before{
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 5px;
+        background-color: #43cea2;
+        z-index: -1;
+        box-shadow: 0px 0px 0px 3px #fff;
+        top: 0;
+        bottom: 0;
+        left: -100px;/* 負值代表向外延伸 */
+        margin: auto;
+    }
+
+    .list li.active ~ li{
+        background: linear-gradient(9deg,#999,#ccc);
+    }
+
+    .list li.active ~ li::before{
+        background: #b0b0b0;
+    }
+
+    </style>
+</head>
+<body>
+    
+
+
+    <ol class="list">
+        <li>
+            <i class="fas fa-address-book"></i>
+            收到訂單
+        </li>
+        <li class="active">
+            <i class="fas fa-cart-plus"></i>
+            撿貨中
+        </li>
+        <li>
+            <i class="fas fa-truck"></i>
+            運送中
+        </li>
+        <li>
+            <i class="fas fa-balance-scale"></i>
+            已送達
+        </li>
+    </ol>
+</body>
+</html>

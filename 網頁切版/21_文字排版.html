@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        padding: 100px 0;
+    }
+
+    .container h1{
+        width: 400px;
+        text-align: right;
+        box-sizing: border-box;
+        padding: 20px 15px 0;
+        background-color: #d5c7b9;
+    }
+
+    .container h1::after{
+        content: "";
+        display: block;
+        height: 4px;
+        width: 4em;
+        background-color: #000;
+        margin-left: auto;
+    }
+
+    .container .txt{
+        width: 800px;
+        box-sizing: border-box;
+        padding: 0 25px;
+        column-count: 2;/* 呈現2欄畫面 */
+        column-gap: 30px;
+    }
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="wrap">
+        <div class="container">
+            <h1>CSS COKE IS AWESOME</h1>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumque.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumque.</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumque.</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

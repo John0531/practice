@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .banner{
+        height: 500px;
+        background:url(https://picsum.photos/1920/500/?random=1) center top / cover ;
+    }
+
+    .sec{
+        position: relative;
+    }
+
+    .sec .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+        padding: 100px 0;
+        position: relative;
+        z-index: 2;
+    }
+
+    .sec .item{
+        width: 570px;
+        margin: 0 15px;
+    }
+
+    .sec .item h2{ 
+        margin-bottom: 1.3em;
+    }
+
+    .sec .item p{
+        line-height: 1.7;
+        margin-bottom: 1.6em;
+    }
+
+    .sec::after{
+        content: "";
+        display: block;
+        position: absolute;
+        width: 150px;
+        height: 150px;
+        background-color: #fff;
+        top: 0;
+        left: 50%;
+        transform: translateX(-30%) translateY(-50%);
+        border-radius: 50%;
+        box-shadow: 160px 0px 0px -30px #fff,
+                    100px 0px 0px 20px #fff,
+                    300px 0px 0px 40px #fff,
+                    450px 0px 0px 30px #fff,
+                    600px 0px 0px 20px #fff,
+                    750px 0px 0px -10px #fff,
+                    800px 0px 0px 15px #fff,
+
+                    -100px 0px 0px 20px #fff,
+                    -200px 0px 0px 40px #fff,
+                    -360px 0px 0px 30px #fff,
+                    -500px 0px 0px 0px #fff,
+                    -630px 0px 0px -10px #fff,
+                    -750px 0px 0px 40px #fff,
+
+                    100px 0px 0px 60px rgba(0,0,10,0.5),
+                    165px 0px 0px 80px rgba(0,0,10,0.5),
+                    220px 0px 0px 50px rgba(0,0,10,0.5),
+                    360px 0px 0px 90px rgba(0,0,10,0.5),
+                    440px 0px 0px 100px rgba(0,0,10,0.5),
+                    560px 0px 0px 30px rgba(0,0,10,0.5),
+                    640px 0px 0px 70px rgba(0,0,10,0.5),
+                    700px 0px 0px 40px rgba(0,0,10,0.5),
+                    
+                    -90px 0px 0px 60px rgba(0,0,10,0.5),
+                    -150px 0px 0px 110px rgba(0,0,10,0.5),
+                    -230px 0px 0px 60px rgba(0,0,10,0.5),
+                    -360px 0px 0px 70px rgba(0,0,10,0.5),
+                    -490px 0px 0px 80px rgba(0,0,10,0.5),
+                    -640px 0px 0px 100px rgba(0,0,10,0.5),
+                    -780px 0px 0px 90px rgba(0,0,10,0.5);
+        }
+    
+    .sec::before{
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 200px;
+        background-color: #fff;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }/* 將多出的陰影蓋住 */
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="banner"></div>
+    <div class="sec">
+        <div class="container">
+            <div class="item">
+                <h2>都是為何操作系統具</h2>
+                <p>很少智能專家檢驗關係平靜還不必須，主機印象用於默認品牌一款於是，導致內容簡介研究所初步一口什麼樣不可能，都不發佈文章右鍵種子休閒協會內部對手價格製造，沒有任何人家怪物部門個人五金熟悉流行高校都要英雄推進歡迎，說完各自明星核心多個室內很久關注非常郵遞區號，春天意思國際為你奇怪一是需求內心監督，而已創建警察輸入我市運用校園指標請問程度預期，電子郵件裝備精美試題規則真實指數特徵，手機前面網際快車那樣大。</p>
+            </div>
+            <div class="item">
+                <h2>都是為何操作系統具</h2>
+                <p>很少智能專家檢驗關係平靜還不必須，主機印象用於默認品牌一款於是，導致內容簡介研究所初步一口什麼樣不可能，都不發佈文章右鍵種子休閒協會內部對手價格製造，沒有任何人家怪物部門個人五金熟悉流行高校都要英雄推進歡迎，說完各自明星核心多個室內很久關注非常郵遞區號，春天意思國際為你奇怪一是需求內心監督，而已創建警察輸入我市運用校園指標請問程度預期，電子郵件裝備精美試題規則真實指數特徵，手機前面網際快車那樣大。</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

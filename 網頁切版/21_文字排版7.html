@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .wrap{
+        margin: 100px 0;
+    }
+
+    .container{
+        width: 1200px;
+        margin: auto;
+        display: flex;
+    }
+
+    .container h1{
+        width: 400px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        order: 1;
+        font-size: 90px;
+        padding-left: 15px;
+        color: #aaa;
+        position: relative;
+    }
+
+    .container h1::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border: 30px solid #f1b444;
+        transform: rotate(10deg);
+        z-index: -1;
+    }
+    .container h1::after{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 200px;
+        height: 200px;
+        border: 30px solid #f1c555;
+        transform: rotate(17deg);
+        z-index: -1;
+    }
+
+    .container .txt{
+        width: 800px;
+        flex-shrink: 0;
+        box-sizing: border-box;
+        column-count: 2;
+        column-gap: 30px;
+        padding: 15px;
+        box-shadow: 0 0 30px #ccc;
+    }
+
+    .container .txt p{
+        margin-bottom: 1em;
+    }
+
+    .container .txt p:first-child::first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }
+    </style>
+</head>
+<body>
+    
+
+    <div class="wrap">
+        <div class="container">
+            <h1>CSS COKE IS AWESOME</h1>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat temporibus consequuntur quibusdam, iure repellat voluptatem veniam placeat omnis aliquam officiis ad rem inventore provident expedita ex est distinctio ab animi consequatur officia. Vero molestiae facere accusantium suscipit qui maiores totam odio nihil, aliquid architecto? Cum veniam sint non! Optio doloremque a odio ipsa iste explicabo enim praesentium, dolores aperiam sunt pariatur in officia numquam earum facilis sapiente dolorum modi. Explicabo voluptates sed aliquid debitis optio laboriosam voluptate obcaecati quaerat iure fugiat. Eius sequi, similique sed quod ad perspiciatis voluptatibus totam ea veniam incidunt possimus labore est recusandae delectus suscipit?</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus quaerat temporibus consequuntur quibusdam, iure repellat voluptatem veniam placeat omnis aliquam officiis ad rem inventore provident expedita ex est distinctio ab animi consequatur officia. Vero molestiae facere accusantium suscipit qui maiores totam odio nihil, aliquid architecto? Cum veniam sint non! Optio doloremque a odio ipsa iste explicabo enim praesentium, dolores aperiam sunt pariatur in officia numquam earum facilis sapiente dolorum modi. Explicabo voluptates sed aliquid debitis optio laboriosam voluptate obcaecati quaerat iure fugiat. Eius sequi, similique sed quod ad perspiciatis voluptatibus totam ea veniam incidunt possimus labore est recusandae delectus suscipit?</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

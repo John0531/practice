@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    .container{
+        width: 1200px;
+        margin: auto;
+        padding: 100px 0;
+    }
+
+    .container h1{
+        box-sizing: border-box;
+        padding: 0 15px;
+        margin-bottom: 30px;
+        font-size: 90px;
+        color: #aaa;
+        position: relative;
+    }
+
+    .container h1::after{
+        content: "";
+        display: block;
+        width: 100%;
+        height: 70px;
+        bottom: 0;
+        background-color: #eee;
+        position: absolute;
+        z-index: -1;
+    }
+
+    .container .txt{
+        box-sizing: border-box;
+        padding: 0 25px;
+        column-count: 2;
+        column-gap: 30px;
+    }
+
+    .container .txt p:first-letter{
+        font-size: 40px;
+        float: left;
+        padding-right: 10px;
+    }/* 首字放大文繞圖 */
+    </style>
+</head>
+<body>
+    
+
+
+    <div class="wrap">
+        <div class="container">
+            <h1>CSS COKE IS AWESOME</h1>
+            <div class="txt">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumqueLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptatesLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumqueLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptatesLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates.</p>
+                <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates incidunt harum aliquid? Nesciunt at error eveniet esse pariatur vel provident iusto cumqueLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptatesLorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium aspernatur itaque nobis error nam doloremque modi voluptates.</P>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

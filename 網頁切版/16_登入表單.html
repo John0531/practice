@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+    }
+
+    html,body{
+        height: 100%;
+    }
+
+    body{
+        background: url(https://picsum.photos/1920/1080/?random=1) no-repeat center center / cover/* 滿版 */;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .login{
+        width: 600px;
+        height: 500px;
+        background-color: rgba(0,0,0,0.5);
+        border-radius: 10px;
+        border: 10px solid #fff;
+        box-shadow: 0 0 60px #000;
+        backdrop-filter: blur(3px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form{
+        width: 400px;
+        color: #fff;
+    }
+
+    .form h2{
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #fff;
+    }
+
+    .form .group{
+        margin-bottom: 20px;
+    }
+
+    .form label{
+        line-height: 2;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    .form input{
+        width: 100%;
+        border: 1px solid #aaa;
+        line-height: 3;
+        border-radius: 5px;
+    }
+    .form .btn-group{
+        font-size: 0;
+        margin-top: 50px;
+    }/* 清除按鈕間的空隙 */
+    
+    .form .btn{
+        font-size: 20px;
+        border-radius: 5px;
+        border: none;
+        background-color: #6ab4ef;
+        width: 190px;
+        padding: 10px 0;
+        color: #fff;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+
+    .form .btn+.btn{
+        margin-left: 20px;
+    }
+
+    </style>
+
+</head>
+<body>
+    
+
+    <div class="login">
+        <form action="" class="form">
+            <h2>會員登入</h2>
+            <div class="group">
+                <label for="user_id">帳號</label><!-- 當點到"帳號"時，自動帶入 -->
+                <input type="text" id="user_id">
+            </div>
+            <div class="group">
+                <label for="user_passwrod">密碼</label><!-- 當點到"帳號"時，自動帶入 -->
+                <input type="text" id="user_passwrod">
+            <div class="btn-group">
+                <button class="btn">登入</button>
+                <button class="btn">取消</button>
+            </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

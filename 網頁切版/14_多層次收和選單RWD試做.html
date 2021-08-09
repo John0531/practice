@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/70df306591.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+        
+    <style>
+    *{
+        margin:0;
+        padding:0;
+        list-style: none;
+        font-family: 'Noto Sans TC', sans-serif;
+    }
+
+    html,body{
+        height: 100%;
+    }
+
+    body{
+        background-color: #546377;
+    }
+
+    .side-menu{
+        width: 20vw;
+        max-width: 300px;
+        height: 100%;
+        padding: 50px 0;
+        box-sizing: border-box;
+        background: linear-gradient(0deg,#3381b0,#c2196c);
+        display: flex;
+        flex-direction: column;
+        box-shadow: 5px 0px 10px rgba(58, 57, 109, 0.611);
+        position: relative;
+        transform: translateX(-100%);
+        transition: 0.3s;
+    }
+
+    #side-menu-switch{
+        position: absolute;
+        opacity: 0;
+        z-index: 1;
+    }/* 讓勾選圖示隱藏 */
+
+    #side-menu-switch:checked + .side-menu{
+        transform: translateX(0%);
+    }/* id樣式 */
+
+    #side-menu-switch:checked + .side-menu label .fa-angle-right{
+        transform: scale(-1);
+    }/* 將icon鍵頭顛倒 */
+
+    .side-menu form{
+        display: flex;
+        margin: 0 10px 50px;
+        border-radius: 100px;
+        border: 1px solid rgba(255, 255, 255, 0.466);
+        position: relative;
+    }
+
+    .side-menu form input{
+        border: none;
+        padding: 1vh 1vw;
+        width: 15vw;
+        color: #fff;
+        background-color: transparent;
+    }
+    .side-menu form button{
+        border: none;
+        position: absolute;
+        right: 3vw;
+        width: 1vw;
+        max-width: 1px;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        color: #fff;
+        background-color: transparent;
+    }
+
+
+    @media  screen  and  (min-width : 768px ){
+        .side-menu form button{
+            right: 2vw;
+        }
+    }
+
+    .side-menu form input:focus,
+    .side-menu form button:focus{
+        outline: none;
+    }
+
+    input[type=search]::-webkit-search-cancel-button{
+    -webkit-appearance: none;
+    }/* 清除input search後面的小x */
+
+    .side-menu label{
+        position: absolute;
+        width: 3vw;
+        height: 80px;
+        background-color: #000;
+        color: #fff;
+        right: -3vw;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        line-height: 80px;
+        text-align: center;
+        font-size: 30px;
+        border-radius: 0 10px 10px 0;
+        z-index: 0;
+    }
+
+    .nav a{
+        display: block;
+        padding: 10px;
+        color: #fff;
+        text-decoration: none;
+        position: relative;
+    }
+
+    .nav li + li a::before{
+        content: "";
+        position: absolute;
+        border-top: 1px solid rgba(255, 255, 255, 0.452);
+        left: 10px;
+        right: 10px;
+        top: 0;
+    }/* 選單分隔線 */
+
+    .nav a .fab{
+        font-size: 20px;
+        margin-right: -1.1em;
+        transform: scale(0);
+        transition: 0.3s;
+    }/* icon消失，並將文字移回來 */
+
+    .nav li:hover .fab{
+        margin-right: 0em;
+        transform: scale(1);
+    }
+
+    .nav li:hover > a{
+        background-color: rgba(0,0,0,0.5);
+        color: #fffa1a;
+    }
+
+    .nav li{
+        position: relative;
+        z-index: 1;
+    }
+
+    .nav ul{
+        transform: translateX(-100%);
+        opacity: 0;
+        position: absolute;
+        left: 100%;
+        width: 40vw;
+        max-width: 300px;
+        top: 6px;
+        background-color: rgba(58, 58, 58,0.7);
+        box-shadow: 5px 5px 10px rgba(58, 57, 109, 0.611);
+        transition: 0.7s;
+    }
+
+    .nav li:hover > ul{ 
+        transform: translateX(0%);
+        opacity: 1;
+    }/* 當nav項下的所有li被摸到時，被摸到的那個li項下一層的ul顯示 */
+
+    </style>
+</head>
+<body>
+
+    <input type="checkbox" name="" id="side-menu-switch">
+    
+
+    <div class="side-menu">
+        <form action="">
+            <input type="search" name="" id="" placeholder="請輸入關鍵字">
+            <button><i class="fas fa-search"></i></button>
+        </form>
+        <ul class="nav"><!-- 選單列 -->
+            <li>
+                <a href="#">
+                    <i class="fab fa-apple"></i>
+                    鐵人賽
+                </a>
+                <ul><!-- 第一層 -->
+                    <li>
+                        <a href="#">金魚都能懂的網頁設計入門</a>
+                        <ul><!-- 第二層 -->
+                            <li><a href="#">Day1</a></li>
+                            <li><a href="#">Day2</a></li>
+                            <li><a href="#">Day3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">金魚都能懂的 css 選取器</a>
+                        <ul>
+                            <li><a href="#">Day1</a></li>
+                            <li><a href="#">Day2</a></li>
+                            <li><a href="#">Day3</a></li>
+                            <li><a href="#">Day4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">金魚都能懂的這個網頁怎麼切</a>
+                        <ul>
+                            <li><a href="#">Day1</a></li>
+                            <li><a href="#">Day2</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">連續30天的超實務網頁設計垂直置中教學</a>
+                        <ul>
+                            <li><a href="#">Day1</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-bluetooth"></i>
+                    暴力班
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-bitcoin"></i>
+                    RWD 醬子
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-cc-visa"></i>
+                    金魚網頁
+                </a>
+            </li>
+            <li>
+                <a href href="#">
+                    <i class="fab fa-facebook-square"></i>
+                    金魚切版
+                </a>
+            </li>
+        </ul>
+
+        <label for="side-menu-switch">
+            <i class="fas fa-angle-right"></i>
+        </label><!-- 控制checkbox，點選後打勾 -->
+
+    </div>
+</body>
+</html>

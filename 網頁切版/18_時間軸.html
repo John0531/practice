@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            font-family: 'Noto Sans TC', sans-serif;
+        }
+        
+        body {
+            background-color: #edece1;
+            padding: 0 100px;
+        }
+        
+        .wrap {
+            width: 960px;
+            margin: auto;
+        }
+        
+        .timeline {
+            padding: 100px 0;
+        }
+        
+        .timeline li {
+            width: 50%;
+            box-sizing: border-box;
+            padding: 20px 0;
+            position: relative;
+        }
+        
+        .timeline li:nth-child(odd) {
+            float: left;
+            padding-right: 10vw;
+        }
+        
+        .timeline li:nth-child(even) {
+            float: right;
+            padding-left: 10vw;
+            transform: translateY(50%);
+        }
+        
+        .timeline li:nth-child(odd)::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            width: 1px;
+            top: 0;
+            right: 0;
+            height: 100%;
+            background-color: #ccc;
+        }
+        /* 中間線 */
+        
+        .timeline li:last-child(odd)::after {
+            height: 50%;
+        }
+        
+        .timeline li::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #aaa;
+            z-index: 2;
+        }
+        
+        .timeline li:nth-child(odd)::before {
+            right: -10px;
+        }
+        
+        .timeline li:nth-child(even)::before {
+            left: -10px;
+        }
+        
+        .timeline a {
+            display: block;
+            /* 超連結預設不是block，不能設定寬高 */
+            text-decoration: none;
+            background-color: #fff;
+            border: 1px solid #aaa;
+            box-sizing: border-box;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 5px #888;
+        }
+        
+        .timeline a:hover {
+            background-color: #6fa5f6;
+        }
+        
+        .timeline a:hover h2,
+        .timeline a:hover p {
+            color: #fff;
+        }
+        
+        .timeline h2 {
+            color: #333;
+            font-weight: 700;
+        }
+        
+        .timeline h2::after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 10vw;
+            background-color: #aaa;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+        
+        .timeline li:nth-child(odd) h2::after {
+            right: 0;
+        }
+        
+        .timeline li:nth-child(even) h2::after {
+            left: 0;
+        }
+        
+        .timeline p {
+            color: #666;
+            font-weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="warp">
+        <h1>金魚都能懂的網頁切版 : 時間軸 NO019 | 切版教學 | HTML教學 | 網頁教學 | 網頁切版</h1>
+        <p>拒絶怎麼考生批發小七窗口世界上老公天使一生南方商城居民外面，留學收藏本頁，指定他在，當我突破發言連接我愛每日以來妹妹之間語文，某個編號即可政策看看報導強化附近根本一路理論承受萬華一級，太多國務院，註。</p>
+        <ul class="timeline">
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <h2>網頁教學</h2>
+                    <p>業務紅色股份剛才日本定位主題暴力網頁課程，主流學校倒是一名合同藥品聯合把它，的說據說筆者確認呵呵掌握男性聯盟上路逐漸到來對外，相機污染，權。</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+
+</html>
